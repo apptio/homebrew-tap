@@ -3,7 +3,7 @@ class Kr8 < Formula
   homepage "https://github.com/apptio/kr8"
   url "https://github.com/apptio/kr8/releases/download/v0.0.1/kr8_0.0.1_darwin_amd64.tar.gz"
   version "0.0.1"
-  sha256 "66000cb0f4d27dabb0645ed33f506458e43386f03c411791eaca14e0f43c0b90"
+  sha256 "aa35acc6dc02bdb5d3663a4694cffe7245423c5159867d463ecedfde9d4c25ac"
 
   def install
     bin.install "kr8"
