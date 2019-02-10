@@ -4,7 +4,7 @@ class Kr8 < Formula
   homepage "https://kr8.rocks"
   url "https://github.com/apptio/kr8/releases/download/v0.0.2/kr8_0.0.2_darwin_amd64.tar.gz"
   version "0.0.2"
-  sha256 "a36c2cc98da43c9f14f090568de0132871de12b230db53773200a5bd46ced685"
+  sha256 "65c178827e2049fa0773133b9b9fc718d8caeadff054bd80548b7c22e9f28a41"
   
   depends_on "kubernetes-helm"
   depends_on "jsonnet"
