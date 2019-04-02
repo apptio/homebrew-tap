@@ -2,9 +2,9 @@
 class Kr8 < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "https://kr8.rocks"
-  url "https://github.com/apptio/kr8/releases/download/v0.0.2/kr8_0.0.2_darwin_amd64.tar.gz"
-  version "0.0.2"
-  sha256 "65c178827e2049fa0773133b9b9fc718d8caeadff054bd80548b7c22e9f28a41"
+  url "https://github.com/apptio/kr8/releases/download/v0.1.0/kr8_0.1.0_darwin_amd64.tar.gz"
+  version "0.1.0"
+  sha256 "3ccb735a0a6f202dca5059e5b1e517988005c549476819914d65abb1fef155ad"
   
   depends_on "kubernetes-helm"
   depends_on "jsonnet"
