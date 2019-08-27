@@ -2,16 +2,16 @@
 class KubeConfig < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "https://apptio.com"
-  version "0.4.2"
+  version "0.4.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/apptio/kube-config/releases/download/0.4.2/kube-config_0.4.2_darwin_amd64.tar.gz"
-    sha256 "13b762ae16be07bccce676bc002a4d2c15c9cdef3fec012be0f2bb8b652b8eb1"
+    url "https://github.com/apptio/kube-config/releases/download/0.4.3/kube-config_0.4.3_darwin_amd64.tar.gz"
+    sha256 "ef90437d829fe50a8f58fa9072e92393f3a227a2f6f903913ef28d52c6548d3f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/apptio/kube-config/releases/download/0.4.2/kube-config_0.4.2_linux_amd64.tar.gz"
-      sha256 "d8dd8ef2bc8ae0e73a29a11568b890ae0fe0357580ece155fe1be791ceeae8ef"
+      url "https://github.com/apptio/kube-config/releases/download/0.4.3/kube-config_0.4.3_linux_amd64.tar.gz"
+      sha256 "a788bd3ca5297309f7df32dd02608060c10a99bc47cc0470dcab2e947a6d7f66"
     end
   end
 
