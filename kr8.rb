@@ -2,16 +2,16 @@
 class Kr8 < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "https://kr8.rocks"
-  version "0.2.4"
+  version "0.2.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/apptio/kr8/releases/download/v0.2.4/kr8_0.2.4_darwin_amd64.tar.gz"
-    sha256 "7c344d60a373f3b3e96ed94934f69c8e9502947f17ab42b358de4cf4a83031b4"
+    url "https://github.com/apptio/kr8/releases/download/v0.2.5/kr8_0.2.5_darwin_amd64.tar.gz"
+    sha256 "869c131e54ac7fbaa07bb9f880068204b726641d02936a970b25ea2a7423fd27"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/apptio/kr8/releases/download/v0.2.4/kr8_0.2.4_linux_amd64.tar.gz"
-      sha256 "ec9742bae262a675a758d8fec98d6ec5f3ff7d3601a9d22fe2b5fc9cdfcaab4b"
+      url "https://github.com/apptio/kr8/releases/download/v0.2.5/kr8_0.2.5_linux_amd64.tar.gz"
+      sha256 "cf03f10c5a203fa6727fca96749a8e31ce194a54e6bb823a47bd75eaa03984b0"
     end
   end
   
