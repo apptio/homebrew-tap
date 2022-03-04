@@ -3,7 +3,6 @@ class KubeConfig < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "https://apptio.com"
   version "0.4.9"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/apptio/kube-config/releases/download/0.4.9/kube-config_0.4.9_darwin_amd64.tar.gz"
