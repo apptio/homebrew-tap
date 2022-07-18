@@ -5,24 +5,32 @@
 class Kr8 < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "https://kr8.rocks"
-  version "0.3.3"
+  version "0.3.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.3/kr8_0.3.3_darwin_amd64.tar.gz"
-      sha256 "604591943571f3a8e4e79ec9c80e29c6c335150cce1aff62391792a97a86470c"
+    url "https://github.com/apptio/kr8/releases/download/v0.3.4/kr8_0.3.4_darwin_amd64.tar.gz"
+    sha256 "dfad0628bc30926e6057e7a9e71e79844f6936b6045790517498aa765162e7f6"
 
-      def install
-        bin.install "kr8"
-        bin.install "scripts/kr8-helpers"
+    def install
+      bin.install "kr8"
+      bin.install "scripts/kr8-helpers"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Kr8
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.3/kr8_0.3.3_linux_amd64.tar.gz"
-      sha256 "c92bdfc38b44d87b626b1397261dc69ef3eb56ec9802509ec1fed4dd1cb56637"
+      url "https://github.com/apptio/kr8/releases/download/v0.3.4/kr8_0.3.4_linux_amd64.tar.gz"
+      sha256 "2de7e67725370587e32f6cc9f5aedea9b996323fc7f5fb17e09f09cf03c7a3fd"
 
       def install
         bin.install "kr8"
