@@ -5,11 +5,15 @@
 class Kr8 < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "https://kr8.rocks"
-  version "0.3.5"
+  version "0.3.6"
+
+  depends_on "go-task/tap/go-task"
+  depends_on "helm"
+  depends_on "jsonnet"
 
   on_macos do
-    url "https://github.com/apptio/kr8/releases/download/v0.3.5/kr8_0.3.5_darwin_amd64.tar.gz"
-    sha256 "ce608afdd9fc51873cab245b444b0441898e64de262036add1ed9e3ee32a5345"
+    url "https://github.com/apptio/kr8/releases/download/v0.3.6/kr8_0.3.6_darwin_amd64.tar.gz"
+    sha256 "63aba80d28d6c95dc6e84cf1b63d31f19e4afec38c45b9b12ef263ffc4800346"
 
     def install
       bin.install "kr8"
@@ -29,8 +33,8 @@ class Kr8 < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.5/kr8_0.3.5_linux_amd64.tar.gz"
-      sha256 "3bc840038a0e352029274877a79aa31d0c7f793afad054b75f35298eb11073d6"
+      url "https://github.com/apptio/kr8/releases/download/v0.3.6/kr8_0.3.6_linux_amd64.tar.gz"
+      sha256 "4e12369144550ceddfa3bb2128d1f31cc8300ccbf9a2a09d3c8652b2761ff0cf"
 
       def install
         bin.install "kr8"
@@ -38,8 +42,4 @@ class Kr8 < Formula
       end
     end
   end
-
-  depends_on "kubernetes-helm"
-  depends_on "jsonnet"
-  depends_on "go-task/tap/go-task"
 end
