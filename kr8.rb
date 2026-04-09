@@ -5,7 +5,7 @@
 class Kr8 < Formula
   desc "Opinionated configuration management tool for Kubernetes Cluster"
   homepage "http://apptio.github.io/kr8"
-  version "0.3.7"
+  version "0.4.0"
   license "MIT"
 
   depends_on "go-task/tap/go-task"
@@ -14,27 +14,27 @@ class Kr8 < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.7/kr8_0.3.7_darwin_amd64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/apptio/kr8/releases/download/v0.4.0/kr8_0.4.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_TAP_GITHUB_TOKEN"]}"
         ]
-      sha256 "002ab18ec86eb1f7784ffc9f0a2d0837dc121118301164118940e07272b251fc"
+      sha256 "f1a8c84826d1661ab2746db57d76b2bb0dec393c7611febe5e4fe77f08d41d02"
 
-      def install
+      define_method(:install) do
         bin.install "kr8"
         bin.install "scripts/kr8-helpers"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.7/kr8_0.3.7_darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/apptio/kr8/releases/download/v0.4.0/kr8_0.4.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_TAP_GITHUB_TOKEN"]}"
         ]
-      sha256 "39271c79db36c1edc30fdfc03ee3f6f80c703f19dda831c7bc229d98fc804929"
+      sha256 "a7866fcf08d4b85755337d504208ad89731a07dd5d477bf031af0163e879dfd7"
 
-      def install
+      define_method(:install) do
         bin.install "kr8"
         bin.install "scripts/kr8-helpers"
       end
@@ -42,26 +42,26 @@ class Kr8 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.7/kr8_0.3.7_linux_amd64.tar.gz", using: CurlDownloadStrategy,
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/apptio/kr8/releases/download/v0.4.0/kr8_0.4.0_linux_amd64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_TAP_GITHUB_TOKEN"]}"
         ]
-      sha256 "a24046ddb34a53a2b196ae16d6d7a4b794cd80f445e4112fd5af6d93ce67a7b5"
-      def install
+      sha256 "a1ec6f3498887bf4bd9d1d327988f59f06d7bbf61c47d03e71edd576a968a756"
+      define_method(:install) do
         bin.install "kr8"
         bin.install "scripts/kr8-helpers"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/apptio/kr8/releases/download/v0.3.7/kr8_0.3.7_linux_arm64.tar.gz", using: CurlDownloadStrategy,
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/apptio/kr8/releases/download/v0.4.0/kr8_0.4.0_linux_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_TAP_GITHUB_TOKEN"]}"
         ]
-      sha256 "e109722ae416c9da4d961858785064a1177fa6c3632413594deb698291bd2f97"
-      def install
+      sha256 "a906210bc756b8206338507d63704b2be64bb1957d9bca85067a012a0db8867d"
+      define_method(:install) do
         bin.install "kr8"
         bin.install "scripts/kr8-helpers"
       end
